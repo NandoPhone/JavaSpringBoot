@@ -1,9 +1,6 @@
 package com.cursojava.curso.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,6 +10,7 @@ import lombok.Setter;
 public class usuario {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter @Setter @Column(name = "id")
     private Long id;
 
@@ -29,7 +27,7 @@ public class usuario {
     private String Telefono;
 
     @Getter @Setter @Column(name = "password")
-    private String Pass;
+    private String password;
 
 
 }
